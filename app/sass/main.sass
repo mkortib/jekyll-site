@@ -13,7 +13,7 @@ html, body
 	height: 100%
 
 body
-	height: 3000px
+	height: 8000px
 	font-size: 18px
 	min-width: 320px
 	position: relative
@@ -235,7 +235,7 @@ section
 			font-size: 19px
 
 			a
-				
+
 				&:hover
 					text-decoration: underline
 
@@ -358,6 +358,202 @@ section
 	> *
 		display: inline-block
 
+.news_wrap
+	padding-bottom: $gutter/2
+
+	.pattern
+
+		&::before
+			display: none
+
+	.overlay
+
+		&::before
+			opacity: 0.4
+
+.item_news
+	min-height: 280px
+	margin: $gutter/2 0
+	color: $text-color
+
+	&_content
+		border:
+			left: #dfdfdf 1px solid
+			bottom: #dfdfdf 1px solid
+		z-index: 1
+		position: absolute
+		bottom: 0
+		background-color: #fff
+		width: 80%
+		padding: $gutter
+
+		h3
+			font-size: 17px
+			line-height: 1.2
+			margin: 0
+
+	&:hover
+
+		h3
+			text-decoration: underline
+
+.date
+	font-size: 13px
+	color: $accent
+	font-family: baron-g, sans-serif
+	font-weight: bold 
+
+.aside_box
+	margin-bottom: $gutter
+	text-align: center
+
+	.img-responsive
+		display: inline-block
+
+.dark_section
+	padding: 30px 0
+	background-color: $dark
+
+	h2
+
+		a
+			color: #fff
+
+.col_item
+	margin: 12px 0 15px
+
+	a
+		text-decoration: none
+		transition: color .3s ease
+
+		&:hover, &.hover
+			text-decoration: underline
+
+	.item_comments
+		margin-top: 2px
+
+		.fa, .item_comments_count
+			color: #59505a
+
+		.fa
+			font-size: 12px
+			margin: 0 5px 0 20px
+
+		&_count
+
+			&::after
+				left: -37px
+				color: #59505a
+				opacity: 1
+
+		.date
+			display: inline-block
+			margin-top: 0
+
+	h4
+		font-size: 15px
+		font-weight: normal
+		margin: 0
+		line-height: 1.35
+
+	.col_item_meta
+		margin: 6px 0 8px
+
+	&.col_item_dark
+
+		a
+			color: #a4a7ab
+
+			&:hover, &.hover
+				color: #fff
+
+.fourth_section
+	background-color: #f5f5f5
+	padding: 30px 0 0 0
+
+	&_header
+		margin-bottom: 10px
+
+	.item_title
+		min-height: 300px
+
+	.date
+		display: inline-block
+		margin-left: 20px
+		color: #ffffff
+
+	.item_social
+		margin-top: 1px
+
+.type_one
+
+	&_header
+		margin-bottom: $gutter/2
+
+	&_first
+
+		> div
+
+			> a
+				display: block
+				background-color: $dark
+
+		.item_social
+			margin-top: 8px
+
+
+			a, .item_comments, .date
+				color: #a0a0a0
+				font-size: 13px
+
+			.item_comments_count
+				font-size: 12px
+
+			.date
+				display: inline-block
+				margin-left: 20px
+
+		h3
+			font-size: 22px
+			text-transform: uppercase
+			font-weight: 800
+			margin-top: 8px
+			line-height: 1.2
+			margin-bottom: 30px
+
+			a
+				color: $text-color
+				display: block
+				transition: color .3s ease
+
+			&:hover
+
+				a
+					color: $accent
+
+	.pattern
+		margin-bottom: $gutter
+
+	.item_title_white
+
+		.date
+			font-size: 13px
+			display: inline-block
+			margin-left: 20px
+			color: #fff
+
+		.item_comments_count
+			font-size: 12px
+
+		.item_social
+			margin-top: 0
+
+		.item_title
+			min-height: 230px
+
+			&_content
+				padding: 40px 40px 25px
+					
 
 
 
