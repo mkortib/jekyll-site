@@ -199,10 +199,10 @@ a
 	overflow: hidden
 
 .top_ad
-	margin-bottom: $gutter
+	padding-bottom: $gutter
 
 .container-fluid
-	max-width: 1346px
+	max-width: 1300px
 	padding: 0 $gutter
 
 section
@@ -273,6 +273,11 @@ section
 
 			&::before
 				opacity: 0.75
+
+	&_cat_header
+
+		&::before
+			display: none
 
 .overlay
 	background-size: cover
@@ -554,9 +559,429 @@ section
 			&_content
 				padding: 40px 40px 25px
 					
+.button
+	display: inline-block
+	border: none
+	color: #ffffff
+	text-decoration: none
+	background-color: $accent
+	padding: 12px 40px
+	font-size: 14px
+	text-transform: uppercase
+	font-weight: 600
+	border-radius: 10em
+	text-align: center
+	position: relative
+	outline: none
+	cursor: pointer
+	transition: background-color .1s ease
+
+	&:hover, &:focus
+		text-decoration: none
+		color: #ffffff
+
+	&:hover
+		background-color: lighten($accent, 5%)
+
+	&:active
+		background-color: darken($accent, 5%)
+
+.s_more
+	padding: $gutter*2 0
+	background-color: #f5f5f5
+
+.main_footer
+	background-color: $dark_blue
+	padding: 25px 0
+	border-bottom: 1px solid rgba(#fff, .1)
+
+.bottom_footer
+	background-color: $dark_blue
+	padding: 25px 0 35px
+
+	.logo
+		display: inline-block
+
+	p
+		color: rgba(#fff, .2)
+		font-size: 12px
+		margin: 5px
+
+	.footer_copy
+		color: rgba(#fff, .45)
+		font-size: 13px
+		font-family: baron-g, sans-serif
+
+.footer_menu
+
+	li
+
+		&.active
+			text-decoration: underline
+			background: none
+
+			a
+				background: none	
+
+		a
+			font-size: 15px
+			padding: 0 10px 
+
+			&:hover
+				text-decoration: underline
+				background: none
+
+nav
+
+	&.soc
+		padding: 15px 0 20px
+
+		ul, li
+			margin: 0
+			padding: 0
+			list-style-type: none
+			text-align: center
+
+		li
+			display: inline-block
+
+			a
+				display: block
+				text-align: center
+				border: 1px solid rgba(#fff, .1)
+				border-radius: 10em
+				width: 52px
+				height: 52px
+				line-height: 50px
+				color: #ffffff
+				font-size: 24px
+				margin: 4px
+				transition: border-color .3s ease, opacity .3s ease
+
+				.fa
+					transition: opacity .3s ease
+					opacity: 0.75
+
+				&:hover
+					border-color: rgba(#fff, .35)
+
+					.fa
+						opacity: 1
+
+.logo_footer
+
+	span
+		color: $accent
 
 
+// CATEGORY PAGE
 
+.cat_header
+	background-size: cover
+	background-position: center
+	position: relative
+
+	&::before
+		opacity: 0.25
+		content: ''
+		background-color: #000
+		position: absolute
+		left: 0
+		right: 0
+		top: 0
+		bottom: 0
+
+	&_block
+		position: relative
+		padding: 100px 80px 100px
+		color: #ffffff
+		background-color: rgba($dark, .8)
+
+		&::before
+			content: ''
+			opacity: 0.2
+			transition: opacity .3s ease, top .3s ease, left .3s ease, right .3s ease, bottom .3s ease
+			z-index: 1
+			position: absolute
+			border: 1px solid #fff
+			top: 10px 
+			right: 10px
+			bottom: 10px
+			left: 10px
+
+		p, h1, h2
+			margin: 0
+
+		h1, h2
+			font-size: 30px
+			text-transform: uppercase
+			margin-bottom: 15px
+
+	&.overlay
+
+		&:hover
+
+			&::before
+				opacity: 0.3
+
+.cat_list_first
+	padding-top: $gutter
+	background-color:	#f5f5f5
+
+.type_one_cat
+	background-color: transparent
+	padding: 0
+
+
+.cat_list
+	padding-top: $gutter	
+	background-color: #fff
+
+a.cat_list_item
+	color: $text_color
+	text-decoration: none
+	display: block
+	margin: $gutter/1.5 0
+	border-bottom: 1px solid #dfdfdf
+	cursor: pointer
+
+	h2, h3
+		transition: color .3 ease
+		line-height: 1.2
+		font-size: 21px
+		font-weight: 800
+	
+	img
+		transition: opacity .3s ease
+		margin-bottom: 12px
+
+	p
+		font-size: 15px
+		margin-top: 11px
+
+	.date
+		margin-top: 5px
+
+	&:last-child
+		border: none
+
+	&:hover
+
+		.pattern
+
+			&::before
+				top: 10px
+				right: 10px
+				bottom: 10px
+				left: 10px
+				opacity: 0.2
+
+			img
+				opacity: 0.75
+
+		h2, h3
+			text-decoration: underline
+			color: $accent
+			
+		p
+			color: $text_color
+
+.main_aside
+	margin-bottom: $gutter
+
+.lb_header
+	border-bottom: 2px solid $accent
+	padding-bottom: 5px
+
+.lb_header, .all_posts_header
+	font-size: 21px
+	font-weight: 800
+	margin: 0
+	text-align: left
+
+.all_posts_header
+	text-transform: uppercase
+
+.lb_item
+	position: relative
+	padding-left: 120px
+	background-color: #f0f0f0
+	margin-bottom: 2px
+	transition: background-color .3s ease
+	text-align: left
+
+	&:hover
+		background-color: $accent
+
+		.lb_catname
+			color: #fff
+
+	.lb_body
+		background-color: #f9f9f9
+		padding: 10px 15px
+
+		a
+			color: $text_color
+			transition: color .3s ease
+
+			&:hover
+				color: $accent
+
+	&_header
+		font-size: 14px
+		line-height: 1.4
+		display: block
+		font-weight: 500
+
+	.date
+		display: inline-block
+		margin-left: 20px
+		margin-top: 0
+
+	.item_comments
+
+		.fa
+			font-size: 12px
+			margin-right: 5px
+			color: #aaaaaa
+		
+		.item_comments_count
+			color: #aaaaaa
+
+			&:hover
+				color: $accent
+
+				&::after
+					color: $accent
+
+.lb_catname
+	position: absolute
+	left: 15px
+	top: 15px
+	color: #888888
+	font-size: 14px
+	font-weight: 800
+	max-width: 90px
+	transition: color .3s ease
+	text-decoration: none
+
+	&:focus
+		color: #888
+
+	&:hover
+		text-decoration: underline
+
+.lb_footer
+	line-height: 1.2
+
+.pagination_section
+	padding: $gutter*2 0
+	background-color: #f5f5f5
+
+	&_first
+		padding: $gutter 0
+		background-color: transparent 
+		margin-bottom: $gutter
+		border-bottom: 1px solid #dfdfdf
+
+.pagination
+	padding-top: 12px
+
+	a, span
+		display: inline-block
+		margin-top: 5px
+		width: 42px
+		height: 42px
+		line-height: 40px
+		border: 2px solid #e5e5e5
+		border-radius: 10em
+		font-size: 18px
+		font-weight: 800
+		text-decoration: none
+		color: #666666
+		transition: border-color .3s ease, color .3s ease
+
+	a
+
+		&:hover
+			border-color: $accent
+			color: $accent
+
+		&.pagination_left, &.pagination_right
+			color: $accent
+
+	span
+
+		&.active
+			border-color: $accent
+			color: $accent
+
+	.pagination_left, .pagination_right
+		border: none
+		font-size: 32px
+		width: 30px
+
+// NEWS OPEN PAGE
+
+.page_header
+	height: 80vh
+	min-height: 460px
+	color: #ffffff
+	position: relative
+
+	&.overlay
+
+		&::before
+			background-image: linear-gradient(rgba(#000, .2), rgba(#000, .7))
+			background-color: transparent
+			opacity: 1
+
+.ispage
+
+	.top_line
+		position: absolute
+		z-index: 1
+		width: 100%
+
+.page_header
+
+	&_content
+		position: absolute
+		width: 100%
+		bottom: 15%
+
+	&_meta
+
+		> *
+			display: inline-block
+
+		.date
+			color: #ffffff
+			font-size: 15px
+
+		h1
+			font-size: 32px
+			line-height: 1.2
+			margin: 15px 0
+			display: block
+
+		.item_comments_count
+			color: #fff
+
+.page_category_link
+	font-size: 14px
+	text-transform: uppercase
+	color: #ffffff
+	background-color: $accent
+	padding: 1px 6px
+	text-decoration: none
+	font-weight: 800
+	margin-right: 8px
+
+	&:hover, &:focus
+		color: #ffffff
+		text-decoration: none
+	 
 
 
 @import "media" // Always at the end
