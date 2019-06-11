@@ -38,6 +38,7 @@ gulp.task('js', function() {
 	return gulp.src([
 		'app/libs/jquery/dist/jquery.min.js',
 		'app/libs/likely/likely.js',
+		'app/libs/prognroll/prognroll.js',
 		'app/js/common.js', // Always at the end
 		])
 	.pipe(concat('scripts.min.js'))
